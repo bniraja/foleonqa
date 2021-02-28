@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/bniraja/foleonqa#readme",
   "devDependencies": {
-    "cypress": "^6.5.0",
-    "cypress-wait-until": "^1.7.1",
-    "cypress-xpath": "^1.6.2"
+    "cypress": "^6.5.0"
   },
   "dependencies": {}
 }

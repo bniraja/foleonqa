@@ -15,10 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import './routes'
-import 'cypress-wait-until';
-
-require('cypress-xpath')
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -29,4 +25,9 @@ before(() => {
 
 beforeEach(() => {
     // Cypress commands you would like to run before every single Cypress test.
+     // login before all tests
+     cy.fixture('auth').then((auth) => { // Retrieve auth.json fixture from fixtures folder
+        cy.login(auth.testUser, auth.testPass)
+      })
+      cy.wait(2000)
 })
